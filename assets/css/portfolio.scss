@@ -2,90 +2,120 @@
    input file portfolio.scss
    John Webster
 */
-
-@import "bourbon/bourbon";
-
-// media sizes
-$mediaSmall: 600px;
-$mediaMedium: 992px;
-
-// colors
-$ivory: #FFFFF0;
-$orange-lighten-4:#ffcc80;
-$grey-lighten-1:#bdbdbd;
-$blue-grey-lighten-2: #90a4ae;
-
-
 main {
-    background-color: $ivory;
-    flex: 1 0 auto; // used to make footer sticky
+  background-color: #FFFFF0;
+  flex: 1 0 auto; }
 
-}
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
 
-body { 
-    // make footer sticky
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column; 
-}
-
-// want menu buttons to be a consistent width
 .menuButton {
-    width: 9rem;
-}
-.myDisabled {
-    background-color: $orange-lighten-4 !important;
-    color: $grey-lighten-1;
-}
-#idPhoto {
-    float: left;
-    width:200px;
-    margin-right: 2rem;
-    margin-bottom: 2rem;
-}
-@media only screen and (max-width: $mediaMedium) {
-    #idPhoto {
-        float:none;
-        margin-right: 0;
-        margin-left: 0;
-    }
-}
+  width: 9rem; }
 
+.myDisabled {
+  background-color: #ffcc80 !important;
+  color: #bdbdbd; }
+
+#idPhoto {
+  float: left;
+  width: 200px;
+  margin-right: 2rem;
+  margin-bottom: 2rem; }
+
+@media only screen and (max-width: 992px) {
+  #idPhoto {
+    float: none;
+    margin-right: 0;
+    margin-left: 0; } }
 #headerBox {
-    margin: 0;
-    padding-bottom: 1.5rem;
-}
+  margin: 0;
+  padding-bottom: 1.5rem; }
+
 #headerText {
-    padding: 1rem;
-}
+  padding: 1rem; }
 
 .myInput {
-    // needed !important so not overwritten by maaterialize
-    border: 2px !important; 
-    border-style:solid !important; 
-    border-color:$blue-grey-lighten-2 !important;
-}
+  border: 2px !important;
+  border-style: solid !important;
+  border-color: #90a4ae !important; }
 
 .contactImage {
-    height: 3rem;
-}
+  height: 3rem; }
 
 .contactButton {
-    font-size: 3rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    margin-bottom: 1rem;
-}
+  font-size: 3rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-bottom: 1rem; }
 
 #contactRow {
-    margin-top:  2rem;
-}
+  margin-top: 2rem; }
 
 .portfolioItem {
-    width: 100%;
-    max-width: 200px;
-}
-.cardContentBox {
-    padding: 0.5rem !important;
-}
+  width: 100%;
+  max-width: 200px;
+  margin: 1rem; }
 
+.cardContentBox {
+  padding: 0.5rem !important; }
+
+/* animation */
+@keyframes growCard {
+  0% {
+    transform: scale(1); }
+  20% {
+    transform: scale(1.02); }
+  40% {
+    transform: scale(1.04); }
+  60% {
+    transform: scale(1.06); }
+  80% {
+    transform: scale(1.08); }
+  100% {
+    transform: scale(1.1); } }
+.portfolioItem:hover {
+  animation-timing-function: ease;
+  animation-name: growCard;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  25% {
+    opacity: 0.25; }
+  50% {
+    opacity: 0.5; }
+  75% {
+    opacity: 0.75; }
+  100% {
+    opacity: 1; } }
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  25% {
+    opacity: 0.75; }
+  50% {
+    opacity: 0.5; }
+  75% {
+    opacity: 0.25; }
+  100% {
+    opacity: 0; } }
+.fadePageIn {
+  animation-timing-function: ease;
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both; }
+
+.fadePageOut {
+  animation-timing-function: ease;
+  animation-name: fadeOut;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both; }
+
+/*# sourceMappingURL=portfolio.scss.map */

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Portfolio</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS for materialize -->
@@ -12,30 +13,216 @@
     <!-- compiled using sass -->
     <link rel="stylesheet" type="text/css" href="assets/css/portfolio.css">
 </head>
-<body>
-    
+
+<body class="blue-grey lighten-4">
+    <header id="headerBox" class="blue-grey darken-1">
+        <div class="container">
+            <div id="headerText" class="light-blue white-text">
+                <h4>John Webster</h4>
+            </div>
+        </div>
+    </header>
+
     <main class="container">
-        <h1 id="custom-header">About me</h1>
-        <hr>
-        <img id="idPhoto" class="img-fluid m-2" src="assets/images/idPhoto.jpeg" alt="John Webster">
-        <div class="">
-            <p>
-                I am a fullstack developer and have been living in Folsom, California for over 20 years.
-            </p>
-            <p> Previous to becoming a fullstack developer I designed computer chips. I was at for Intel for nearly 20
-                years, where
-                I worked on chipsets and later developing the internal graphics for CPUs. Before Intel, I worked for ARM, in
-                CPU design.
-            </p>
-            <p> I moved from England to the United States in 1996, but some of my accent is still present.
-            </p>
-            <p>
-                My degree, from Bristol University in England, is in Computer Systems Engineering, where I achieved first
-                class honours.
-            </p>
-            <p>I have two children, and with whatever time I have left I enjoy the outdoors - hiking, cycling and skiing</p>
+
+        <div class="row">
+            <h3 id="custom-header">About me</h3>
+            <hr>
+        </div>
+
+        <!-- menu buttons used at small size -->
+        <div class="col s2 hide-on-med-and-up center-align" id="mediumMenuBox">
+            <button class="myDisabled menuButton waves-effect waves-light btn-large orange" data-value="About">About</button>
+            <button class="menuButton waves-effect waves-light btn-large orange" data-value="Contact">Contact</button>
+            <button class="menuButton waves-effect waves-light btn-large orange" data-value="Portfolio">Portfolio</button>
+        </div>
+
+        <!-- about page visible on load -->
+        <div class="row">
+            <div id = "About" class="col s12 m10" >
+                <img id="idPhoto" class="img-fluid" src="assets/images/idPhoto.jpeg" alt="John Webster">
+                <div>
+                    <p>
+                        I am a fullstack developer and have been living in Folsom, California for over 20 years.
+                    </p>
+                    <p> Previous to becoming a fullstack developer I designed computer chips. I was at for Intel for nearly 20
+                        years, where
+                        I worked on chipsets and later developing the internal graphics for CPUs. Before Intel, I worked for ARM, in
+                        CPU design.
+                    </p>
+                    <p> I moved from England to the United States in 1996, but some of my accent is still present.
+                    </p>
+                    <p>
+                        My degree, from Bristol University in England, is in Computer Systems Engineering, where I achieved first
+                        class honours.
+                    </p>
+                    <p>I have two children, and with whatever time I have left I enjoy the outdoors - hiking, cycling and skiing</p>
+                </div>
+            </div>
+
+            <!-- contact page not visible at loading -->
+            <div id="Contact" class="col s12 m10" style="display:none;">
+                <!-- basic contact information -->
+                <div id="contactRow" class="row">
+                    <h4>Click on images to reach my pages</h4>
+                    <a href="https://github.com/johnlobster" class="contactButton waves-effect waves-light  blue darken-2 white-text">
+                        Github
+                        <img src="assets/images/GitHub-Mark-Light-120px-plus.png" class="contactImage">
+                    </a>
+                    <br>
+                    <a href="https://www.linkedin.com/in/john-webster-3444851" class="contactButton waves-effect waves-light">
+                        <img src="assets/images/LinkedIn-Blue-40@2x.png"class="contactImage">
+                    </a>
+                    <br>
+                    <a href="assets/images/resume.pdf"class="contactButton waves-effect waves-light  blue darken-2 white-text">
+                        Resume
+                    </a> 
+                </div>
+                <!-- email form -->
+                <form class="row">
+                    <h4>Email</h4>
+                    <div class="input-field">
+                        <input class="myInput" id="nameInput" type="text" name="Name" placeholder="Your name"> 
+                        <label for="nameInput">Name</label>
+                    </div>
+                    <div class="input-field">
+                        <input class="myInput" id="emailInput" type="email" name="Email address" placeholder="Your email"> 
+                        <label for="inputEmail">Email address</label> 
+                    </div>
+                    <div class="input-field">
+                        <textarea  id="inputMessage" class="materialize-textarea myInput"></textarea>
+                        <label for="inputMessage">Message</label>
+                    </div>
+                    <button class="btn orange waves-effect waves-light" id="sendButton" type="submit">
+                        Send
+                    </button>
+                </form>   
+            </div>
+
+            <div id="Portfolio" class="col s12 m10" style="display:none;">
+                <div class="row">
+                
+                    
+                    <div class="card portfolioItem left">
+                        <div class="card-image">
+                            <a href="https://johnlobster.github.io/Random_Restaurant/">
+                                <img src="assets/images/knifeAndFork.jpg" alt="Random restaurant" class="img-fluid card-img-top ">
+                            </a>
+                            <!-- <span class="card-title">Random restaurant</span> -->
+                        </div>
+                        <div class="cardContentBox card-content center-align">
+                            <h5>Random restaurant</h5>
+                        </div>
+                        <div class="card-action center-align">
+                            <a href="https://johnlobster.github.io/Random_Restaurant/">Go to page</a>
+                        </div>
+                    </div>
+
+                    <div class="card portfolioItem left">
+                        <div class="card-image">
+                            <a href="https://johnlobster.github.io/rpsApp/">
+                                <img src="assets/images/rps.jpg" alt="Rock paper scissors" class="img-fluid card-img-top ">
+                            </a>
+                        </div>
+                        <div class="cardContentBox card-content center-align">
+                            <h5>Multiplayer rock paper scissors</h5>
+                        </div>
+                        <div class="card-action center-align">
+                            <a href="https://johnlobster.github.io/rpsApp/">Go to page</a>
+                        </div>
+                    </div>
+
+                    <div class="card portfolioItem left">
+                        <div class="card-image">
+                            <a href="https://johnlobster.github.io/giphyApp/">
+                                <img src="assets/images/giphy-logo-e1477932075273.png" alt="giphy logo" class="img-fluid card-img-top ">
+                            </a>
+                        </div>
+                        <div class="cardContentBox card-content center-align">
+                            <h5>gif viewer</h5>
+                        </div>
+                        <div class="card-action center-align">
+                            <a href="https://johnlobster.github.io/giphyApp/">Go to page</a>
+                        </div>
+                    </div>
+
+                    
+
+                    
+                    
+                    <div class="card portfolioItem left">
+                        <div class="card-image">
+                            <a href="https://johnlobster.github.io/trivia/">
+                                <img src="assets/images/questions.png" alt="Question mark" class="img-fluid card-img-top ">
+                            </a>
+                            <!-- <span class="card-title">Word game</span> -->
+                        </div>
+                        <div class="cardContentBox card-content center-align">
+                            <h5>Trivia Game</h5>
+                        </div>
+                        <div class="card-action center-align">
+                            <a href="https://johnlobster.github.io/trivia/">Go to page</a>
+                        </div>
+                    </div>
+
+                    <div class="card portfolioItem left">
+                        <div class="card-image">
+                            <a href="https://johnlobster.github.io/swGame/index.html">
+                                <img src="assets/images/lightSabers.jpg" alt="Light sabres" class="img-fluid card-img-top ">
+                            </a>
+                            <!-- <span class="card-title">Word game</span> -->
+                        </div>
+                        <div class="cardContentBox card-content center-align">
+                            <h5>Star wars game</h5>
+                        </div>
+                        <div class="card-action center-align">
+                            <a href="https://johnlobster.github.io/swGame/index.html">Go to page</a>
+                        </div>
+                    </div>
+
+                    <div class="card portfolioItem left">
+                        <div class="card-image">
+                            <a href="https://johnlobster.github.io/wordGame/index.html">
+                                <img src="assets/images/letters-background.jpg" alt="Word game" class="img-fluid card-img-top ">
+                            </a>
+                            <!-- <span class="card-title">Word game</span> -->
+                        </div>
+                        <div class="cardContentBox card-content center-align">
+                            <h5>Word Game</h5>
+                        </div>
+                        <div class="card-action center-align">
+                            <a href="https://johnlobster.github.io/wordGame/index.html">Go to page</a>
+                        </div>
+                    </div>
+                
+                </div>
+            
+            
+            </div> <!-- end Portfolio -->
+
+
+            <!-- menu visible when screen is medium -->
+            <div class ="col s2 hide-on-small-only" id="mediumMenuBox">
+                <div class="blue-grey darken-1"> <!-- doesn't do anything because buttons extend past container -->
+                    <button id="mediumMenuAbout" class = "myDisabled menuButton waves-effect waves-light btn-large orange" data-value="About">About</button>
+                    <button id="mediumMenuContact" class="menuButton waves-effect waves-light btn-large orange" data-value="Contact">contact</button>
+                    <button id="mediumMenuPortfolio" class="menuButton waves-effect waves-light btn-large orange" data-value="Portfolio">Portfolio</button>
+                </div>
+
+            </div>
         </div>
     </main>
+
+    <footer class="page-footer blue-grey darken-1">
+        <div id=footerBox" class="container light-blue">
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2019 Copyright John Webster
+                </div>
+            </div>
+        </div>  
+    </footer>
+
 
     <!-- Compiled and minified JavaScript for materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
