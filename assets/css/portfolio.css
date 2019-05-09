@@ -1,0 +1,63 @@
+/* css for portfolio generated using sass
+   input file portfolio.scss
+   John Webster
+*/
+main {
+  background-color: #FFFFF0;
+  flex: 1 0 auto; }
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+
+.menuButton {
+  width: 9rem; }
+
+.myDisabled {
+  background-color: #ffcc80 !important;
+  color: #bdbdbd; }
+
+#idPhoto {
+  float: left;
+  width: 200px;
+  margin-right: 2rem;
+  margin-bottom: 2rem; }
+
+@media only screen and (max-width: 992px) {
+  #idPhoto {
+    float: none;
+    margin-right: 0;
+    margin-left: 0; } }
+#headerBox {
+  margin: 0;
+  padding-bottom: 1.5rem; }
+
+#headerText {
+  padding: 1rem; }
+
+.myInput {
+  border: 2px !important;
+  border-style: solid !important;
+  border-color: #90a4ae !important; }
+
+.contactImage {
+  height: 3rem; }
+
+.contactButton {
+  font-size: 3rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-bottom: 1rem; }
+
+#contactRow {
+  margin-top: 2rem; }
+
+.portfolioItem {
+  width: 100%;
+  max-width: 200px; }
+
+.cardContentBox {
+  padding: 0.5rem !important; }
+
+/*# sourceMappingURL=portfolio.css.map */

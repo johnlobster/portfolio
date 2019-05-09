@@ -1,0 +1,91 @@
+/* css for portfolio generated using sass
+   input file portfolio.scss
+   John Webster
+*/
+
+@import "bourbon/bourbon";
+
+// media sizes
+$mediaSmall: 600px;
+$mediaMedium: 992px;
+
+// colors
+$ivory: #FFFFF0;
+$orange-lighten-4:#ffcc80;
+$grey-lighten-1:#bdbdbd;
+$blue-grey-lighten-2: #90a4ae;
+
+
+main {
+    background-color: $ivory;
+    flex: 1 0 auto; // used to make footer sticky
+
+}
+
+body { 
+    // make footer sticky
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column; 
+}
+
+// want menu buttons to be a consistent width
+.menuButton {
+    width: 9rem;
+}
+.myDisabled {
+    background-color: $orange-lighten-4 !important;
+    color: $grey-lighten-1;
+}
+#idPhoto {
+    float: left;
+    width:200px;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+@media only screen and (max-width: $mediaMedium) {
+    #idPhoto {
+        float:none;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+#headerBox {
+    margin: 0;
+    padding-bottom: 1.5rem;
+}
+#headerText {
+    padding: 1rem;
+}
+
+.myInput {
+    // needed !important so not overwritten by maaterialize
+    border: 2px !important; 
+    border-style:solid !important; 
+    border-color:$blue-grey-lighten-2 !important;
+}
+
+.contactImage {
+    height: 3rem;
+}
+
+.contactButton {
+    font-size: 3rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#contactRow {
+    margin-top:  2rem;
+}
+
+.portfolioItem {
+    width: 100%;
+    max-width: 200px;
+}
+.cardContentBox {
+    padding: 0.5rem !important;
+}
+
