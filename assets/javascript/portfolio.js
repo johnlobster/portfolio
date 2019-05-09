@@ -8,10 +8,29 @@ $(document).ready(function () {
     var tempSetInterval2;
 
 
+    // setup the materialize character counter for textarea in the form
+    $('textarea#inputMessage').characterCounter();
+
+
     // submit button for email contact
     $("#sendButton").on("click", function (event) {
         event.preventDefault(); // form submit so don't post
-        console.log("send button");
+        var mailString = "";
+        var userName = $("#nameInput").val().trim();
+        var userEmail = $("#emailInput").val().trim();
+        var userText = $("#inputMessage").val().trim();
+        // add mail address
+        mailString += "JohnLobster";
+        mailString += "@";
+        mailString += "comcast.net";
+        // add subject
+        mailString += "?subject=" + encodeURIComponent("From portfolio : ") + userName;
+        // add text
+        mailString += "&body=" + encodeURIComponent(userText)
+        mailString += encodeURIComponent("\n\nFrom: ") + userEmail;
+        // console.log("mailString " + mailString);
+        // pop up the mail client
+        window.location.href = "mailto:" + mailString;
     });
 
     // menu buttons

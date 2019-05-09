@@ -26,8 +26,10 @@
     <main class="container">
 
         <div class="row">
-            <h3 id="custom-header">About me</h3>
-            <hr>
+            <div class="col s12">
+                <h3 id="custom-header">About me</h3>
+                <hr>
+            </div>
         </div>
 
         <!-- menu buttons used at small size -->
@@ -63,7 +65,7 @@
             <!-- contact page not visible at loading -->
             <div id="Contact" class="col s12 m10" style="display:none;">
                 <!-- basic contact information -->
-                <div id="contactRow" class="row">
+                <div id="contactRow">
                     <h4>Click on images to reach my pages</h4>
                     <a href="https://github.com/johnlobster" class="contactButton waves-effect waves-light  blue darken-2 white-text">
                         Github
@@ -79,7 +81,7 @@
                     </a> 
                 </div>
                 <!-- email form -->
-                <form class="row">
+                <form>
                     <h4>Email</h4>
                     <div class="input-field">
                         <input class="myInput" id="nameInput" type="text" name="Name" placeholder="Your name"> 
@@ -90,7 +92,8 @@
                         <label for="inputEmail">Email address</label> 
                     </div>
                     <div class="input-field">
-                        <textarea  id="inputMessage" class="materialize-textarea myInput"></textarea>
+                        <i class="material-icons prefix">mode_edit</i>
+                        <textarea  id="inputMessage" class="materialize-textarea myInput" data-length="300"></textarea>
                         <label for="inputMessage">Message</label>
                     </div>
                     <button class="btn orange waves-effect waves-light" id="sendButton" type="submit">
