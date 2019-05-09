@@ -16,15 +16,20 @@ $(document).ready(function () {
 
     // menu buttons
     $(".menuButton").on("click", function() {
-        if ( ! $(this).hasClass("myDisabled")) {  // do nothing if button is disabled
+        // simpleDisabled class is used to prevent a new menu button being pushed
+        // whilst animation is still in progress
+        if ((!$(this).hasClass("myDisabled")) && (!$(this).hasClass("simpleDisabled"))) {  
+            // but not disabled so process
             var newScreen = $(this).attr("data-value");
+            var button = $(this);
             if ( newScreen !== thisScreen) { // shouldn't happen but might if messing with screen sizes
                 
                 // enable the other buttons
                 $(".menuButton").removeClass("myDisabled");
+                $(".menuButton").addClass("simpleDisabled");
 
                 // disable this button 
-                $(this).addClass("myDisabled");
+                button.addClass("myDisabled");
 
                 // change the header
                 $("#custom-header").text(newScreen);
@@ -50,11 +55,12 @@ $(document).ready(function () {
                         // remove the animation classes
                         $("#" + newScreen).removeClass("fadePageIn");
                         $("#" + thisScreen).removeClass("fadePageOut");
+                        $(".menuButton").removeClass("simpleDisabled");
                         thisScreen = newScreen;
                         clearTimeout(tempSetInterval2);
-                    }, 900);
+                    }, 700);
                     
-                }, 900);
+                }, 700);
                 
             }
             else { // action if screen isn't changing

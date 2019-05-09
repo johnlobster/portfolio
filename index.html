@@ -203,10 +203,16 @@
 
             <!-- menu visible when screen is medium -->
             <div class ="col s2 hide-on-small-only" id="mediumMenuBox">
-                <div class="blue-grey darken-1"> <!-- doesn't do anything because buttons extend past container -->
-                    <button id="mediumMenuAbout" class = "myDisabled menuButton waves-effect waves-light btn-large orange" data-value="About">About</button>
-                    <button id="mediumMenuContact" class="menuButton waves-effect waves-light btn-large orange" data-value="Contact">contact</button>
-                    <button id="mediumMenuPortfolio" class="menuButton waves-effect waves-light btn-large orange" data-value="Portfolio">Portfolio</button>
+                <div id="menuButtonBox"> 
+                    <button id="mediumMenuAbout" 
+                        class = "myDisabled menuButton flyIn waves-effect waves-light btn-large orange" 
+                        data-value="About" >About</button>
+                    <button id="mediumMenuContact" 
+                        class="menuButton flyIn waves-effect waves-light btn-large orange" 
+                        data-value="Contact"style="animation-delay:0.4s;">contact</button>
+                    <button id="mediumMenuPortfolio" 
+                    class="menuButton flyIn waves-effect waves-light btn-large orange" 
+                    data-value="Portfolio" style="animation-delay:0.8s;">Portfolio</button>
                 </div>
 
             </div>
