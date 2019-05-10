@@ -29,6 +29,8 @@ main {
   flex: 1 0 auto; }
 
 body {
+  background-image: url(../images/blueBackground.jpg);
+  background-repeat: repeat;
   display: flex;
   min-height: 100vh;
   flex-direction: column; }
@@ -88,7 +90,13 @@ body {
   max-width: 200px;
   margin: 1rem; }
 
+.cardTitle {
+  // reduce margin in h5 to shrink card a little
+  margin-top: 0;
+}
+
 // code from stack overflow to get cards to align neatly
+// uses html5 columns
 
 @mixin column-count($ct) {
   -webkit-column-count: $ct;
@@ -221,4 +229,4 @@ body {
 
 
 
-/*# sourceMappingURL=portfolio.scss.map */
+
