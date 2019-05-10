@@ -33,6 +33,27 @@ $(document).ready(function () {
         window.location.href = "mailto:" + mailString;
     });
 
+    // copy email to clipboard button
+    $("#emailButton").on("click", function() {
+        // console.log("copy email address");
+        var myAddress = "John"+"Lobster"+"@"+"comcast"+".net";
+        // console.log("Copy email address - address is "+ myAddress);
+        // to make this work, the text has to be visible in the DOM, so add to 
+        // a fake element, then remove and hide the fake element
+        // I put the fake element in the html so don't have to create on the fly
+        
+        // make dummy textarea visible
+        $("#dummyTextarea").show();
+        // copy to dummy textarea
+        $("#dummyTextarea").text(myAddress);
+        $("#dummyTextarea").select();
+        document.execCommand("copy");
+        // removing email address and hiding textarea so can't be searched for in html
+        $("#dummyTextarea").text("");
+        $("#dummyTextarea").hide();
+        
+    });
+
     // menu buttons
     $(".menuButton").on("click", function() {
         // simpleDisabled class is used to prevent a new menu button being pushed

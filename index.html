@@ -79,19 +79,29 @@
                     <a href="assets/images/JohnWebster.pdf"class="contactButton waves-effect waves-light  blue darken-2 white-text center-align">
                         Resume
                     </a> 
+                    <br>
+                    <!-- dummy text area used for copy to clipboard -->
+                    <textarea id="dummyTextarea" style="display:none;"></textarea>
+                    <button id="emailButton" class="contactButton waves-effect waves-light  blue darken-2 white-text center-align">
+                        Copy my Email address to clipboard
+                    </button>
                 </div>
                 <!-- email form -->
                 <form>
                     <h4>Email me</h4>
-                    <div class="input-field">
-                        <i class="material-icons prefix">account_circle</i>
-                        <input class="myInput" id="nameInput" type="text" name="Name" placeholder="Your name"> 
-                        <label for="nameInput">Name</label>
-                    </div>
-                    <div class="input-field">
-                        <i class="material-icons prefix">email</i>
-                        <input class="myInput" id="emailInput" type="email" name="Email address" placeholder="Your email"> 
-                        <label for="inputEmail">Email address</label> 
+                    <div class="row">
+                        <div class="col s12 m6">
+                            <div class="input-field">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input class="myInput" id="nameInput" type="text" name="Name" placeholder="Your name"> 
+                                <label for="nameInput">Name</label>
+                            </div>
+                            <div class="input-field">
+                                <i class="material-icons prefix">email</i>
+                                <input class="myInput" id="emailInput" type="email" name="Email address" placeholder="Your email"> 
+                                <label for="inputEmail">Email address</label> 
+                            </div>
+                        </div>
                     </div>
                     <div class="input-field">
                         <i class="material-icons prefix">mode_edit</i>
