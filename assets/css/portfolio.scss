@@ -33,11 +33,26 @@ body {
   background-repeat: repeat;
   display: flex;
   min-height: 100vh;
-  flex-direction: column; }
+  flex-direction: column;
+  // fonts 
+  font-family: 'Alegreya Sans', sans-serif;
+  // this font seems to want a bigger size
+  font-size: 18px;
+}
 
+h1,h2,h3,h43,h5 {
+  font-family: 'Roboto', sans-serif;
+}
+
+#smallMenuBox {
+  margin-bottom: 1rem;
+}
 .menuButton {
   width: 9rem; }
 
+#resumeBox {
+  font-family: 'Cabin', sans-serif;
+}
 
 .myDisabled {
   background-color: $orange-lighten-4 !important;
@@ -61,6 +76,11 @@ body {
 
 #headerText {
   padding: 1rem; }
+
+#jwBox {
+  margin-top: 0;
+  font-weight: bold;
+}
 
 .myInput {
   border: 2px !important;
