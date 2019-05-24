@@ -1,4 +1,4 @@
-# portfolio
+#  portfolio
 A basic portfolio for John Webster showing information about me, contacts and links to web apps
 
 #### Technologies
