@@ -1,5 +1,12 @@
+.DS_Store
+node_modules
+npm-debug.log
+.env
 desktop.ini
-.sass-cache
-portfolio.css.map
-temp.css
-temp.css.map
+.vscode/
+.sass-cache/
+assets/css/.sass-cache/
+assets/css/portfolio.css.map
+assets/css/temp.css
+assets/css/temp.css.map
+

@@ -7,6 +7,8 @@ $(document).ready(function () {
     var tempSetInterval;
     var tempSetInterval2;
 
+    // initialize modals
+    $('.modal').modal();
 
     // setup the materialize character counter for textarea in the form
     $('textarea#inputMessage').characterCounter();
