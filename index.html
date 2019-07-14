@@ -150,7 +150,17 @@
                     <div id="modal-recBooker" class="modal portfolio-modal">
                         <div class="modal-content">
                             <h4><img src="assets/images/recBooker_logo.svg" alt="recBooker logo"></h4>
-                            <p></p>
+                            <p>recBooker is a app and website that helps eliminate the common problem
+                                when individuals or sports team rent a sport field or party gazebo
+                                only to find when they arrive at their assigned time there is already someone
+                                using the facility</p>
+                            <p>Users can create a user account, create new bookings, view bookings 
+                                    for a facility, and view their own bookings</p>
+                            <p>recBooker is a full stack app that uses sequelize, mysql, express, handlebars, bootstrap, 
+                                jQuery and cookie-session. For testing it uses mocha, chai, chai-http and TravisCI, 
+                                which is linked into github, for checking before pull request is complete. It is 
+                                deployed on Heroku, note that it takes Heroku 10-20 seconds to restart</p>
+                            <p> recBooker was a group project completed as part of a UCDavis/Trilogy bootcamp</p>
                         </div>
                         <div class="modal-footer">
                               <a href="https://github.com/johnlobster/recBooker.git"
@@ -173,11 +183,41 @@
                             <h5 class="cardTitle">Random restaurant</h5>
                         </div>
                         <div class="card-action center-align">
-                            <a href="https://johnlobster.github.io/Random_Restaurant/">Go to page</a>
-                            <a href="https://github.com/johnlobster/Random_Restaurant.git">Github repo</a>
+                            <a class="modal-trigger portfolio-card-action-link" href="#modal-Random_Restaurant">More info</a>
+                            <br>
+                            <a href="https://johnlobster.github.io/Random_Restaurant/" class=" portfolio-card-action-link">Go to page</a>
+                            <br>
+                            <a href="https://github.com/johnlobster/Random_Restaurant.git" class=" portfolio-card-action-link">Github repo</a>
                         </div>
                     </div>
                     
+                    <div id="modal-Random_Restaurant" class="modal portfolio-modal">
+                        <div class="modal-content">
+                            <h4>Random Restaurant
+                            </h4>
+                            <p>This app solves the problem when two people don't agree where to eat. It allows
+                                each person to select a food(cuisine) type, and then randomly chooses a restaurant
+                                nearby, showing address, cuisine type and a map. Each picked restaurant is stored 
+                                in a table, where the user can choose to blacklist the restaurant (never go again),
+                                or "whitelist" the restaurant. The app excludes restaurants recently chosen, so 
+                                whitelist allows it to be chosen again. The restaurants visited table is shown on
+                                the page, and saved in a Firebase database (cloud storage)
+                            </p>
+                            <p>Random restaurant is a front end app that uses bootstrap, firebase and moment. It uses 
+                                the web APIs for Zomato (Restaurant search) and Mapbox
+                            </p>
+                            <p>Random restaurant was a group project completed as part of a UCDavis/Trilogy bootcamp</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="https://johnlobster.github.io/Random_Restaurant"
+                                class="light-blue btn waves-effect waves-light">Go to Github page</a>
+                            <a href="https://github.com/johnlobster/Random_Restaurant.git"
+                                class="light-blue btn waves-effect waves-light">Github repo</a>
+                            <a href="#!"
+                                class="modal-close waves-effect waves-light btn blue-grey lighten-1">Close</a>
+                        </div>
+                    </div>
+
                     <div class="card portfolioItem">
                         <div class="card-image">
                             <a href="https://github.com/johnlobster/liri.git">
@@ -189,7 +229,36 @@
                             <h5 class="cardTitle">liri - node.js searcher</h5>
                         </div>
                         <div class="card-action center-align">
+                                                        <a class="modal-trigger portfolio-card-action-link"
+                                                            href="#modal-Liri">More info</a>
                             <a href="https://github.com/johnlobster/liri.git">Github repo</a>
+                        </div>
+                    </div>
+
+                    <div id="modal-Liri" class="modal portfolio-modal">
+                        <div class="modal-content">
+                            <h4>Liri
+                            </h4>
+                            <h5>Node.js search program (command line input)</h5>
+                            <p>Liri uses web APIs from spotify, omdb and bandsintown to search for movies, songs
+                                and concerts, from command line input, for example
+                            </p>
+                            <p><code>node liri movie-this The good the bad and the ugly</code></p>
+                            <p>Screenshots can be seen at <a href="https://github.com/johnlobster/liri/blob/master/results/README.md">
+                              Liri screenshots</a></p>
+                            <p>This was not a complex problem, but the APIs did not return data as expected and further searches had 
+                                to be made in the returned data
+                            </p>
+                            <p>Liri was a project completed as part of a
+                                UCDavis/Trilogy bootcamp</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="https://github.com/johnlobster/liri/blob/master/results/README.md"
+                                class="light-blue btn waves-effect waves-light">Screen shots</a>
+                            <a href="https://github.com/johnlobster/liri.git"
+                                class="light-blue btn waves-effect waves-light">Github repo</a>
+                            <a href="#!"
+                                class="modal-close waves-effect waves-light btn blue-grey lighten-1">Close</a>
                         </div>
                     </div>
 
