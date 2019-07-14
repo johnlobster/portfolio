@@ -135,6 +135,7 @@ h1,h2,h3,h4,h5 {
   margin-top: 0;
 }
 
+// use small capital font for links
 // had to make this query very specific to be able to override materialize defaults
 #Portfolio div.card.portfolioItem div.card-action a {
   font-family: 'Alegreya Sans SC', sans-serif;
@@ -154,6 +155,8 @@ h1,h2,h3,h4,h5 {
   -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
           page-break-inside: avoid; /* Firefox */
                break-inside: avoid; /* IE 10+ */
+  display: grid;
+  justify-content: space-evenly;
   .card {
     display: inline-block;
     overflow: visible;
@@ -161,18 +164,21 @@ h1,h2,h3,h4,h5 {
 }
 
 @media #{$small-and-down} {
-  .cards-container {
-    @include column-count(1);
+  .cardsContainer {
+    grid-template-columns: auto;
+    //@include column-count(1);
   }
 }
 @media #{$medium-and-up} {
-  .cards-container {
-    @include column-count(2);
+  .cardsContainer {
+    grid-template-columns: auto auto;
+    //@include column-count(2);
   }
 }
 @media #{$large-and-up} {
-  .cards-container {
-    @include column-count(3);
+  .cardsContainer {
+    grid-template-columns: auto auto auto;
+    //@include column-count(3);
   }
 }
 
