@@ -45,11 +45,10 @@ h1,h2,h3,h43,h5 {
 }
 
 .portfolio-modal {
-  z-index: 1003; 
-  display: none; 
-  opacity: 0; 
-  transform: scaleX(0.7); 
-  top: 4%;
+  background-color: $ivory;
+  border-color: $ivory;
+  border-radius: 15px;
+  border-width: 2px;
 }
 
 #smallMenuBox {
@@ -121,6 +120,11 @@ h1,h2,h3,h43,h5 {
 .cardTitle {
   // reduce margin in h5 to shrink card a little
   margin-top: 0;
+}
+
+div.card-action a.portfolio-card-action-link {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  text-transform: none !important;
 }
 
 // code from stack overflow to get cards to align neatly
