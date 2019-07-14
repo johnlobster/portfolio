@@ -8,6 +8,7 @@ $ivory: #FFFFF0;
 $orange-lighten-4:#ffcc80;
 $grey-lighten-1:#bdbdbd;
 $blue-grey-lighten-2: #90a4ae;
+$orange-text: #ffab40;
 
   // copied from stack overflow
   // Media Query Ranges
@@ -40,10 +41,11 @@ body {
   font-size: 18px;
 }
 
-h1,h2,h3,h43,h5 {
+h1,h2,h3,h4,h5 {
   font-family: 'Roboto', sans-serif;
 }
 
+// tweaks to modals 
 .portfolio-modal {
   background-color: $ivory;
   border-color: $ivory;
@@ -56,6 +58,9 @@ h1,h2,h3,h43,h5 {
   border-top-width: 2px;
   border-top-style: solid;
   background-color: $ivory;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 #smallMenuBox {
@@ -129,9 +134,10 @@ h1,h2,h3,h43,h5 {
   margin-top: 0;
 }
 
-div.card-action a {
+// had to make this query very specific to be able to override materialize defaults
+#Portfolio div.card.portfolioItem div.card-action a {
   font-family: 'Alegreya Sans SC', sans-serif;
-  text-transform: none !important;
+  text-transform: none ;
 }
 
 // code from stack overflow to get cards to align neatly
@@ -188,7 +194,7 @@ div.card-action a {
   80% {
     transform: scale(1.08); }
   100% {
-    transform: scale(1.1); } }
+    transform: scale(1.05); } }
 
 .portfolioItem:hover {
   animation-timing-function: ease;
@@ -197,12 +203,12 @@ div.card-action a {
   animation-iteration-count: 1;
   animation-fill-mode: both; }
 
-  .contactButton:hover {
-    animation-timing-function: ease;
-    animation-name: growCard;
-    animation-duration: 0.3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: both;
+.contactButton:hover {
+  animation-timing-function: ease;
+  animation-name: growCard;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
 }
 @keyframes fadeIn {
   0% {
