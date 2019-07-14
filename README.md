@@ -15,9 +15,13 @@ A basic portfolio for John Webster showing information about me, contacts and li
 <https://johnlobster.github.io/portfolio/>
 
 #### css generation
-`sass portfolio.scss temp.css`
 
-`npx postcss temp.css --use autoprefixer --output portfolio.css`
+If `sass`, `postcss-cli` and `autoprefixer` are all saved globally, the following bash command can be used
+```
+sass portfolio.scss temp.css && postcss temp.css --use autoprefixer --output portfolio.css
+```
+The `&&` in bash indicates that the second command is executed if the first one completes without error
+
 
 #### Design notes
 
