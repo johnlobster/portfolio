@@ -166,18 +166,21 @@ h1,h2,h3,h4,h5 {
 @media #{$small-and-down} {
   .cardsContainer {
     grid-template-columns: auto;
+    justify-content: space-around;
     //@include column-count(1);
   }
 }
 @media #{$medium-and-up} {
   .cardsContainer {
     grid-template-columns: auto auto;
+    justify-content: space-evenly;
     //@include column-count(2);
   }
 }
 @media #{$large-and-up} {
   .cardsContainer {
     grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
     //@include column-count(3);
   }
 }
