@@ -186,7 +186,7 @@
                         <div class="card-action center-align">
                             <a class="modal-trigger portfolio-card-action-link"
                                 href="#modal-newsCommenter">More info</a>
-                            <a href="https://remembrance-backbacon-77087.herokuapp.com/"
+                            <a href="https://stormy-ravine-83945.herokuapp.com/"
                                 class="portfolio-card-action-link">Heroku page</a>
                             <a href="https://github.com/johnlobster/newsCommenter.git"
                                 class="portfolio-card-action-link">Github repo</a>
@@ -196,12 +196,30 @@
                     <div id="modal-newsCommenter" class="modal portfolio-modal">
                         <div class="modal-content">
                             <h4>Onion scraper</h4>
-                            <p></p>
+                            <p>This app (newsCommenter) is a full stack app that "scrapes"
+                                data from a web page, stores it in a mongodb database, and then
+                                displays the data on a web page. Users can then add notes about each article,
+                                and those notes are also stored in the mongodb database.
+                            </p>
+                            <p>I chose to scrape data from "The onion", a satirical news site, hence the "Onion scraper" title. 
+                                 The app
+                                only refers to the onion in two places, the scraper function defined in
+                                <code>routes/scrape.js</code>, in the title, defined in <code>
+                                    views/layout/main.handlebars</code>, and in the help modal, defined in 
+                                    <code>views/index.handlebars</code> . The app can therefore be easily altered
+                                    if a different news site is chosen, or if the onion changes the way it displays
+                                    data.
+                            </p>
+                            <p>newsCommenter uses the following technologies: mongodb, express, handlebars,
+                                Node.js, mongoose, cheerio, winston, morgan and axios.
+                            </p>
+                            <p> newsCommenter was completed as part of a UCDavis/Trilogy
+                                bootcamp</p>
                         </div>
                         <div class="modal-footer">
                             <a href="https://github.com/johnlobster/newsCommenter.git"
                                 class="light-blue btn waves-effect waves-light">Github repo</a>
-                            <a href="https://remembrance-backbacon-77087.herokuapp.com/"
+                            <a href="https://stormy-ravine-83945.herokuapp.com/"
                                 class="light-blue btn waves-effect waves-light">Heroku page</a>
                             <a href="#!"
                                 class="modal-close waves-effect waves-light btn blue-grey lighten-1">Close</a>
