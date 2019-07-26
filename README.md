@@ -9,7 +9,7 @@ A basic portfolio for John Webster showing information about me, contacts and li
 * Materialize
 * JQuery
 * sass 
-* autoprefixer (sass post-processor to add -webkit prefixes)
+* autoprefixer (css processor to add -webkit prefixes)
 
 #### Deployed at
 <https://johnlobster.github.io/portfolio/>
