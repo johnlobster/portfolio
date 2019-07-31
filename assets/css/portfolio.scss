@@ -157,6 +157,8 @@ h1,h2,h3,h4,h5 {
           page-break-inside: avoid; /* Firefox */
                break-inside: avoid; /* IE 10+ */
   display: grid;
+  grid-column-gap: 1vw;
+  grid-template-rows: 1fr;
   justify-content: space-evenly;
   .card {
     display: inline-block;
@@ -212,7 +214,9 @@ h1,h2,h3,h4,h5 {
   animation-name: growCard;
   animation-duration: 0.3s;
   animation-iteration-count: 1;
-  animation-fill-mode: both; }
+  animation-fill-mode: both;
+  box-shadow: 7px 7px 5px #666666;
+}
 
 .contactButton:hover {
   animation-timing-function: ease;
