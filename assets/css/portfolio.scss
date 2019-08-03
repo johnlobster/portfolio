@@ -63,7 +63,13 @@ h1,h2,h3,h4,h5 {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
+#modal-bookSearch ul {
+  margin-left: 2em;
+}
+#modal-bookSearch li {
+  display: list-item;
+  list-style-type: disc;
+}
 #smallMenuBox {
   margin-bottom: 1rem;
 }
