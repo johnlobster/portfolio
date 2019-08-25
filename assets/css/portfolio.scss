@@ -9,6 +9,7 @@ $orange-lighten-4:#ffcc80;
 $grey-lighten-1:#bdbdbd;
 $blue-grey-lighten-2: #90a4ae;
 $orange-text: #ffab40;
+$myNbackground: #85b73b;
 
   // copied from stack overflow
   // Media Query Ranges
@@ -63,6 +64,39 @@ h1,h2,h3,h4,h5 {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+#myNimage {
+  width: 60%;
+}
+.myNpicture {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+}
+.myNmodalHeader {
+  font-size: 2rem;
+  font-weight: bold;
+  height: 4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  letter-spacing: 0.075rem;
+  background-color: $myNbackground;
+}
+.myNmodalHeader img {
+  height: 4rem;
+  background-color: black;
+}
+.myNmodalHeader .mnLogoBox {
+  // background-color: black;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+
 #modal-bookSearch ul {
   margin-left: 2em;
 }
@@ -88,15 +122,15 @@ h1,h2,h3,h4,h5 {
 #idPhoto {
   float: left;
   width: 200px;
-  margin-right: 2rem;
-  margin-bottom: 2rem; }
+  margin-right: 4rem;
+  margin-bottom: 4rem; }
 
 @media only screen and (max-width: $small-screen) {
   #idPhoto {
     float: none;
     margin-right: 0;
     margin-left: 0; } }
-#headerBox {
+  #headerBox {
   margin: 0;
   padding-bottom: 1.5rem; }
 
@@ -130,7 +164,7 @@ h1,h2,h3,h4,h5 {
 }
 
 #contactRow {
-  margin-top: 2rem; }
+  margin-top: 4rem; }
   
 .portfolioItem {
   width: 100%;

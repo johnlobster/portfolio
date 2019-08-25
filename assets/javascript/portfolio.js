@@ -13,7 +13,8 @@ $(document).ready(function () {
     // setup the materialize character counter for textarea in the form
     $('textarea#inputMessage').characterCounter();
 
-
+    // ping heroku pages so that they are active by the time user gets there
+    
     // submit button for email contact
     $("#sendButton").on("click", function (event) {
         event.preventDefault(); // form submit so don't post
