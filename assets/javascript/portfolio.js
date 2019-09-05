@@ -2,6 +2,11 @@
 // John Webster
 
 $(document).ready(function () {
+    // ping heroku pages so that they are active by the time user gets there
+    $.get("https://shielded-tor-66455.herokuapp.com");
+    $.get("https://remembrance-backbacon-77087.herokuapp.com");
+    $.get("https://hidden-bayou-86482.herokuapp.com");
+    $.get("https://remembrance-backbacon-77087.herokuapp.com/");
     // global variables
     var thisScreen = "About"; // starting screen is About
     var tempSetInterval;
@@ -13,7 +18,7 @@ $(document).ready(function () {
     // setup the materialize character counter for textarea in the form
     $('textarea#inputMessage').characterCounter();
 
-    // ping heroku pages so that they are active by the time user gets there
+    
     
     // submit button for email contact
     $("#sendButton").on("click", function (event) {
@@ -78,9 +83,6 @@ $(document).ready(function () {
                 $("#custom-header").text(newScreen);
                 // fade out the existing screen 
                 $("#" + thisScreen).addClass("fadePageOut");
-
-                // 
-                
 
                 // wait for animations to complete
                 tempSetInterval = setInterval( function() {

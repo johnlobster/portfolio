@@ -42,8 +42,12 @@ body {
   font-size: 18px;
 }
 
-h1,h2,h3,h4,h5 {
-  font-family: 'Roboto', sans-serif;
+h1,h2,h3,h4,h5,button {
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+h3, h4, h5 {
+    font-weight: bold;
 }
 
 // tweaks to modals 
@@ -109,8 +113,20 @@ h1,h2,h3,h4,h5 {
   margin-bottom: 1rem;
 }
 .menuButton {
-  width: 9rem; }
+  width: 9rem; 
+  border-radius: 4px;
+}
 
+@media #{$small-and-down} {
+  .menuButton {
+    width: 7rem;
+    font-size: 0.9rem;
+    line-height: 2.5rem;
+    height: 2.5rem;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+  }
+}
 #resumeBox {
   font-family: 'Cabin', sans-serif;
 }
@@ -142,6 +158,8 @@ h1,h2,h3,h4,h5 {
   margin-top: 0;
   font-weight: bold;
   letter-spacing: 0.075rem;
+  font-family: "Roboto", sans-serif;
+
 }
 
 .myInput {
@@ -164,9 +182,13 @@ h1,h2,h3,h4,h5 {
   width: 15rem;
 }
 
-#contactRow {
-  margin-top: 4rem; }
-  
+// #contactRow {
+//   margin-top: 4rem; }
+
+#contactTitle {
+  width: 15rem;
+  margin-bottom: 0.9rem;
+}
 .portfolioItem {
   width: 100%;
   max-width: 200px;
@@ -328,6 +350,28 @@ h1,h2,h3,h4,h5 {
     animation-fill-mode: both; 
   }
 
+@media #{$small-and-down} {
+  .flyIn {
+    animation-name: moveMenuButtonMobile;
+  }
+}
 
+@keyframes moveMenuButtonMobile {
+  0% {
+    transform: translate(-0.5rem,0); }
+  20% {
+    transform: translate(-1rem,0); }
+  40% {
+    transform: translate(-1.5rem,0); }
+  60% {
+    transform: translate(-2rem,0); }
+  75% {
+    transform: translate(-2.5rem,0); }
+  90% {
+    transform: translate(-3.5rem,0); // it bounces a little
+    }
+  100% {
+    transform: translate(-3rem,0); } 
+  }
 
 
