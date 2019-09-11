@@ -89,7 +89,7 @@ $(document).ready(function () {
                     $("#" + thisScreen).hide();
                     $("#" + newScreen).css("opacity", "0");
                     $("#" + newScreen).show();
-                    
+            
                     // fade in the new screen
                     $("#" + newScreen).addClass("fadePageIn");
 

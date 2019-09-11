@@ -139,8 +139,8 @@ h3, h4, h5 {
 #idPhoto {
   float: left;
   width: 200px;
-  margin-right: 4rem;
-  margin-bottom: 4rem; }
+  margin-right: 1.5rem;
+  margin-bottom: 1.5rem; }
 
 @media only screen and (max-width: $small-screen) {
   #idPhoto {
@@ -155,10 +155,26 @@ h3, h4, h5 {
   padding: 1rem; }
 
 #jwBox {
-  margin-top: 0;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
   font-weight: bold;
   letter-spacing: 0.075rem;
   font-family: "Roboto", sans-serif;
+
+}
+
+// get text to line up with everything else - text is lower because of line height
+#aboutFirstParagraph {
+  margin-top: -0.45rem;
+}
+// For some reason materialize disregards strong and b
+
+#fStackCertificate {
+    font-weight: bold;
+
+}
+.myStrong {
+  font-weight: bold;
 
 }
 
