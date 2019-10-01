@@ -46,6 +46,35 @@ The `&&` in bash indicates that the second command is executed if the first one 
 * CSS grid  
   I converted the portfolio page to a CSS grid. This made the cards in each row the same height, based on the height of the tallest card in that row. The number of columns is adaptive, changing according to the screen width.
 
+#### Heroku page pre-load
+
+Heroku provides free full stack deployment for casual users and so is ideal for my projects. However the "dynos" go to sleep after not being active for a time and so there is a 10 second or so delay on first loading, so if someone viewing my portfolio clicks on one of the heroku links, there is a delay - I saw a statistic that people give up on a web site if they don't see a result within 6 seconds. 
+
+I had an idea that the web page could asynchronously "ping" the sites by doing an http GET to the root, without waiting for or using the result. So by the time the user clicks on a link to a project from the "portfolio" page, the heroku page should not have any delay loading. This works, but a CORS error is reported in the browser console.
+
+Example
+``` js
+$.get("https://remembrance-backbacon-77087.herokuapp.com");
+```
+
+CORS means Cross Origin Resource Sharing. By default, browser scripts are not able to access anything that is not on the same origin (domain + port). CORS is a browser/server interaction using additional headers that allows the server to return data. This is a browser security feature at a lower level in the TCP/IP stack and
+cannot be intercepted by Javascript within the browser. Server apps (for instance Node.js) do not have this issue and can make cross domain requests.
+
+The CORS error message can be prevented from showing in 2 ways
+
+1. The destination server allows the request, either to that specific website, or to all websites, which would be typical of a public API
+2. Use of a reverse proxy that makes the request itself, then changes headers when returning result, so that the browser will see a permitted access
+
+Solution (1) would require altering all the deployed apps, adding header setting through middleware, or at each api end point. 
+
+For (2), there is an example reverse proxy on github, and a deployment on heroku at `https://cors-anywhere.herokuapp.com/`. However the heroku terms forbid the use of heroku for an open reverse proxy, so I would have to deploy my own reverse proxy, limited to only my portfolio domain. The other issue is that the reverse proxy itself would be subject to the startup delay.
+
+I decided that leaving the CORS errors appear in the console would not affect the user experience, so have not implemented a fix.
+
+
+
+
+
 
 
 

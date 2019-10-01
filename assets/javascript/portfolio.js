@@ -3,10 +3,15 @@
 
 $(document).ready(function () {
     // ping heroku pages so that they are active by the time user gets there
+    // CORS errors will be reported in the console, see README
+    // Fix example using a reverse proxy
+    // $.get("https://cors-anywhere.herokuapp.com/https://shielded-tor-66455.herokuapp.com");
     $.get("https://shielded-tor-66455.herokuapp.com");
     $.get("https://remembrance-backbacon-77087.herokuapp.com");
     $.get("https://hidden-bayou-86482.herokuapp.com");
-    $.get("https://remembrance-backbacon-77087.herokuapp.com/");
+    $.get("https://stormy-ravine-83945.herokuapp.com/");
+    $.get("https://still-refuge-63688.herokuapp.com/");
+    $.get("https://guarded-scrubland-84294.herokuapp.com/");
     // global variables
     var thisScreen = "About"; // starting screen is About
     var tempSetInterval;
