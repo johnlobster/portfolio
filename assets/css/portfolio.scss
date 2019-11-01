@@ -146,8 +146,26 @@ h3, h4, h5 {
   #idPhoto {
     float: none;
     margin-right: 0;
-    margin-left: 0; } }
-  #headerBox {
+    margin-left: 0; } 
+}
+
+// Certificate different from id photo because it is created with an internal margin, so has
+// built in white space
+#myCertificate {
+  float: left;
+  margin-right: 1.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: -0.65rem;
+}
+@media only screen and (max-width: $small-screen) {
+  #myCertificate {
+    float: none;
+    margin-right: 0;
+    margin-bottom: -0.5rem;
+  } 
+}
+
+#headerBox {
   margin: 0;
   padding-bottom: 1.5rem; }
 
@@ -169,10 +187,6 @@ h3, h4, h5 {
 }
 // For some reason materialize disregards strong and b
 
-#fStackCertificate {
-    font-weight: bold;
-
-}
 .myStrong {
   font-weight: bold;
 

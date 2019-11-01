@@ -24,7 +24,9 @@ If `sass`, `postcss-cli` and `autoprefixer` are all saved globally, the followin
 ```
 sass portfolio.scss temp.css && postcss temp.css --use autoprefixer --output portfolio.css
 ```
-The `&&` in bash indicates that the second command is executed if the first one completes without error
+The `&&` in bash indicates that the second command is executed if the first one completes without error. THis command is run in the `assets/css/` directory.
+
+`autoprefixer` adds webkit etc. prefix to `css`, based on latest browser data.
 
 
 #### Design notes
