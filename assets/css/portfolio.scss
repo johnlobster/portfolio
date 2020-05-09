@@ -100,6 +100,30 @@ h3, h4, h5 {
   justify-content: center;
   align-items: center;
 }
+
+.tpModalHeader {
+  font-size: 2rem;
+  font-weight: bold;
+  font-size: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  letter-spacing: 0.075rem;
+  background-color: none;
+
+  & img {
+    height: 4rem;
+  }
+}
+
+.tpList {
+  list-style-type: disc !important;
+  padding-left: 3rem !important;
+  & li {
+      list-style-type: disc !important;
+  }
+}
   
 
 #modal-bookSearch ul {

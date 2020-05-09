@@ -149,6 +149,88 @@
                 
                     <div class="card portfolioItem">
                         <div class="card-image">
+                            <a href="https://www.tpapercrisis.com/" >
+                                <img src="assets/images/ToiletPaperCrisis.gif" 
+                                    alt="Toilet Paper Crisis screen shot"
+                                    class="img-fluid card-img-top ">
+                            </a>
+                            <hr>
+                        </div>
+                        <div class="cardContentBox card-content center-align">
+                            <h5 class="cardTitle">Toilet paper crisis</h5>
+                        </div>
+                        <div class="card-action center-align">
+                            <a class="modal-trigger portfolio-card-action-link"
+                                href="#modal-tpcrisis">More info</a>
+                            <a href="https://www.tpapercrisis.com/"
+                                class="portfolio-card-action-link">Website</a><br>
+                            <a href="https://github.com/johnlobster/tpcrisis.git"
+                                class="portfolio-card-action-link">Github repo</a>
+                        </div>
+                    
+                    </div>
+                    <div id="modal-tpcrisis" class="modal portfolio-modal">
+                        <div class="modal-content">
+                            <div class="tpModalHeader">
+                                <span>
+                                    <img src="./assets/images/tRollSpinner.png"
+                                        alt="Toilet roll">
+                                </span>
+                                <span>Toilet Paper Crisis</span>
+                            </div>
+                            <p>
+                                I was inspired to develop this app due to the irony that the response to
+                                a pandemic was for people to stockpile toilet paper leading to completely
+                                empty shelves at stores
+                            </p>
+                            <p> 
+                                In designing this app, I wanted
+                            </p>
+                            <div>
+                                <ul class="tpList">
+                                    <li>User experience: fast time to first render, fast UI responses, humor
+                                    </li>
+                                    <li>Frequent deployments, allowing new content and features to be added
+                                        easily.
+                                        It deploys automatically to a Netlify server, on pushing to the
+                                        github "release" branch</li>
+                                    <li>Static for speed, less complexity and better security</li>
+                                    <li>No ads or use of cookies for good security</li>
+                                    <li>Use of standard frameworks and tools, such as react, react-router,
+                                        create-react-app,
+                                        sass, Bootstrap, Typescript</li>
+                                </ul>
+                            </div>
+                            
+                            <p> 
+                                This a single page app, mobile first with different flexbox grids and menus 
+                                between mobile and desktop 
+                            </p>
+                            <p> 
+                                A downside of react is that there is a lot to be loaded before the first render.
+                                With a slow network or slow mobile phone, the user will not see anything for 
+                                several seconds, so is likely to leave the page before seeing anything 
+                            </p>
+                            <p>
+                                To solve this, I coded a loading screen with a spinner (roll of toilet paper)
+                                into the index.html file. I added a postbuild step to stop any blocking of
+                                render from loading script and css files. The loading screen loads almost immediately
+                                (time to first render), although the time to first interaction will be slower as 
+                                all files need to be loaded
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="https://github.com/johnlobster/tpcrisis.git"
+                                class="light-blue btn waves-effect waves-light">Github repo</a>
+                            <a href="https://www.tpapercrisis.com/"
+                                class="light-blue btn waves-effect waves-light">Website</a>
+                            <a href="#!"
+                                class="modal-close waves-effect waves-light btn blue-grey lighten-1">Close</a>
+                        </div>
+                    </div>
+
+                    <div class="card portfolioItem">
+                        <div class="card-image">
                             <a href="https://shielded-tor-66455.herokuapp.com/" class="myNpicture">
                                 <img src="assets/images/myNeighborhood.gif" alt="Neighborhood"
                                     id="myNimage"
