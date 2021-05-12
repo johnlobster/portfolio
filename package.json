@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/johnlobster/portfolio#readme",
   "devDependencies": {
-    "postcss": "^7.0.17",
+    "postcss": "^8.2.10",
     "sass": "^1.22.4"
   }
 }
