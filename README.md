@@ -16,6 +16,9 @@ A basic portfolio for John Webster showing information about me, contacts and li
 #### Deployed at
 <https://johnlobster.github.io/portfolio/>
 
+#### Update
+- Heroku free tier has gone away and apps that depend on Heroku as a server are not working any more
+
 #### css generation
 
 css preprocessing (sass) and postprocessing (autoprefixer) could be automated with makefile, gulp etc. but is not because it's a simple page.
@@ -41,7 +44,9 @@ The `&&` in bash indicates that the second command is executed if the first one 
   This page is reactive and changes between mobile and desktop according to the screen width
 * Structure  
   This page was originally built without a lot of information on it, and more has been added over time.
-  The index.html now contains a lot of content and the scss file is not well organized. It would probably be a good idea to refactor, but it works fine as it stands.
+  The index.html now contains a lot of content and the scss file is not well organized. It would probably be a good idea to refactor.
+  Unfortunately, adding new html is tricky, as VSC doesn't seem to be able to keep up with the syntax checking. If I add a new portfolio item and
+  there is a syntax error, then the menu doesn't load, and so you can't get to the portfolio page to find out what is going on. This really should be changed.
 * Heroku page pre-load  
   Heroku provides free full stack deployment for casual users and so is ideal for my projects. However
   the "dynos" go to sleep after not being active for a time and so there is a 10s or so delay on first loading. To improve this, this web page asynchronously "pings" the sites by doing an http GET to the root. So by the time the user clicks on a link to a project from the "portfolio" page, the heroku page should not have any delay loading
